@@ -8,12 +8,9 @@
 
 #import "RCTAppleHealthKit.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface RCTAppleHealthKit (Test)
 
 - (void)test_returnSomeStringValue:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 
 @end
 
-NS_ASSUME_NONNULL_END
