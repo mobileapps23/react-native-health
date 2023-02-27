@@ -211,6 +211,7 @@ RCT_EXPORT_METHOD(getStepCount:(NSDictionary *)input callback:(RCTResponseSender
 
 RCT_EXPORT_METHOD(testMethod:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
 {
+    [self _initializeHealthStore];
     [self test_returnSomeStringValue:input callback:callback];
 }
 
