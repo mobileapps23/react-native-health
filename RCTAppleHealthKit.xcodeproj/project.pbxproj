@@ -159,6 +159,10 @@
 				136368C2272BE98800C9A95F /* RTCAppleHealthKit+Methods_Statistics.m */,
 				ABA7B427B5187820CBE7BCD1 /* Types */,
 				ABA7B06B86046F15D272E16A /* RCTTypes.h */,
+				ABA7B94050B5945ABBCA2C5A /* RCTInterval.h */,
+				ABA7BF348D7660B4B4A02FB8 /* RCTAggregatorType.h */,
+				ABA7BB4AC7543A3FA3C724F7 /* RCTStatisticRequest.m */,
+				ABA7B8C66B5122081E1BB5CF /* RCTStatisticRequest.h */,
 				406465DB29ACD5CF008436FA /* RCTAppleHealthKit+Test.h */,
 				406465DC29ACD5CF008436FA /* RCTAppleHealthKit+Test.m */,
 			);
@@ -168,10 +172,6 @@
 		ABA7B427B5187820CBE7BCD1 /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				ABA7B94050B5945ABBCA2C5A /* RCTInterval.h */,
-				ABA7BF348D7660B4B4A02FB8 /* RCTAggregatorType.h */,
-				ABA7BB4AC7543A3FA3C724F7 /* RCTStatisticRequest.m */,
-				ABA7B8C66B5122081E1BB5CF /* RCTStatisticRequest.h */,
 			);
 			path = Types;
 			sourceTree = "<group>";
