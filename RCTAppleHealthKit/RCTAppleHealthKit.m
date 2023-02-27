@@ -24,6 +24,7 @@
 #import "RCTAppleHealthKit+Methods_Summary.h"
 #import "RCTAppleHealthKit+Methods_ClinicalRecords.h"
 #import "RTCAppleHealthKit+Methods_Statistics.h"
+#import "RCTAppleHealthKit+Test.h"
 
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventDispatcher.h>
@@ -206,6 +207,11 @@ RCT_EXPORT_METHOD(getStepCount:(NSDictionary *)input callback:(RCTResponseSender
 {
     [self _initializeHealthStore];
     [self fitness_getStepCountOnDay:input callback:callback];
+}
+
+RCT_EXPORT_METHOD(testMethod:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+{
+    [self test_returnSomeStringValue:input callback:callback];
 }
 
 RCT_EXPORT_METHOD(getSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
