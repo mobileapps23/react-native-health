@@ -213,7 +213,7 @@ RCT_EXPORT_METHOD(testMethod:(NSDictionary *)input callback:(RCTResponseSenderBl
 {
     [self _initializeHealthStore];
 
-    //[self test_returnSomeStringValue:input callback:callback];
+    [self test_returnSomeStringValue:input callback:callback];
 }
 
 RCT_EXPORT_METHOD(getSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
