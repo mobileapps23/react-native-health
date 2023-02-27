@@ -18,6 +18,9 @@
 
 - (void)test_returnSomeStringValue:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 {
+    NSDate *date = [RCTAppleHealthKit dateFromOptions:input key:@"date" withDefault:[NSDate date]];
+    NSLog(@"some log info: %@", date);
+
     NSDictionary *response = @{
             @"value" : @"Some String Value",
     };
