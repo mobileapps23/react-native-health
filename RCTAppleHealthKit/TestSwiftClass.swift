@@ -1,5 +1,5 @@
 //
-//  TestClass.swift
+//  TestSwiftClass.swift
 //  RCTAppleHealthKit
 //
 //  Created by Anastasia Mishur on 27.02.23.
