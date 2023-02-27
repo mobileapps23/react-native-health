@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RCTAppleHealthKit (Test)
 
-- (void)test_returnSomeStringValue:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
+- (void)test_returnSomeStringValue:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 
 @end
 
