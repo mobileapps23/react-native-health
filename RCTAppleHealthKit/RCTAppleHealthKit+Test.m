@@ -9,7 +9,9 @@
 #import "RCTAppleHealthKit+Test.h"
 #import "RCTAppleHealthKit+Queries.h"
 #import "RCTAppleHealthKit+Utils.h"
-#import "RCTAppleHealthKit-Swift.h"
+
+#import "RCTAppleHealthKit-Swift.h
+
 #import "SwiftInterfaceFiles.h"
 
 #import <React/RCTBridgeModule.h>
