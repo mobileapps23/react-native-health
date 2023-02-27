@@ -6,6 +6,6 @@
 //  Copyright © 2023 Greg Wilson. All rights reserved.
 //
 
-@interface TestSwiftClass()
-- (NSString *) returnValue;
-@end
+//@interface TestSwiftClass()
+//- (NSString *) returnValue;
+//@end

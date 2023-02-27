@@ -8,9 +8,9 @@
 
 import Foundation
 
-@objc (TestSwiftClass)
-public class TestSwiftClass: NSObject {
-    func returnValue() -> String {
-        return "value from Swift class"
-    }
-}
+//@objc (TestSwiftClass)
+//public class TestSwiftClass: NSObject {
+//    func returnValue() -> String {
+//        return "value from Swift class"
+//    }
+//}
