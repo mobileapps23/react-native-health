@@ -7,6 +7,9 @@
 //
 
 #import "RCTAppleHealthKit.h"
+
+#import "RCTAppleHealthKit-Swift.h"
+
 #import "RCTAppleHealthKit+TypesAndPermissions.h"
 
 #import "RCTAppleHealthKit+Methods_Activity.h"
