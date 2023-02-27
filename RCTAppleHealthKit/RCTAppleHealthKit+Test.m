@@ -9,6 +9,8 @@
 #import "RCTAppleHealthKit+Test.h"
 #import "RCTAppleHealthKit+Queries.h"
 #import "RCTAppleHealthKit+Utils.h"
+#import "SwiftInterfaceFiles.h"
+#import <RCTAppleHealthKit/RCTAppleHealthKit-Bridging-Header.h>//
 
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventDispatcher.h>
@@ -18,11 +20,18 @@
 
 - (void)test_returnSomeStringValue:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 {
+
+
+    TestSwiftClass *instanceOfTestClass = [TestSwiftClass new];
+    NSString *result = [instanceOfTestClass returnValue];
+
+
     NSDate *date = [RCTAppleHealthKit dateFromOptions:input key:@"date" withDefault:[NSDate date]];
     NSLog(@"some log info: %@", date);
 
     NSDictionary *response = @{
             @"value" : @"Some String Value",
+            @"valueFromSwift" : @(result),
     };
 
 

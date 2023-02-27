@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <HealthKit/HealthKit.h>
 
+#import <RCTAppleHealthKit/RCTAppleHealthKit-Bridging-Header.h>//
+
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventEmitter.h>
 #import <React/RCTUtils.h>
