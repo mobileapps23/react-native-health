@@ -9,7 +9,7 @@
 #import "RCTAppleHealthKit+Test.h"
 // #import "RCTAppleHealthKit+Queries.h"
 // #import "RCTAppleHealthKit+Utils.h"
-#import "SwiftInterfaceFiles.h"
+//#import "SwiftInterfaceFiles.h"
 
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventDispatcher.h>
@@ -20,9 +20,8 @@
 - (void)test_returnSomeStringValue:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 {
 
-
-    TestSwiftClass *instanceOfTestClass = [TestSwiftClass new];
-    NSString *result = [instanceOfTestClass returnValue];
+    //TestSwiftClass *instanceOfTestClass = [TestSwiftClass new];
+    //NSString *result = [instanceOfTestClass returnValue];
 
 
     NSDate *date = [RCTAppleHealthKit dateFromOptions:input key:@"date" withDefault:[NSDate date]];
@@ -30,12 +29,10 @@
 
     NSDictionary *response = @{
             @"value" : @"Some String Value",
-            @"valueFromSwift" : @(result),
+            //@"valueFromSwift" : @(result),
     };
 
-
-        callback(@[[NSNull null], response]);
-
+    callback(@[[NSNull null], response]);
 }
 
 @end
