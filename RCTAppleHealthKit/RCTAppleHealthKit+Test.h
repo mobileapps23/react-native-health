@@ -8,6 +8,7 @@
 
 #import "RCTAppleHealthKit.h"
 
+@class TestSwiftClass
 @interface RCTAppleHealthKit (Test)
 
 - (void)test_returnSomeStringValue:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;

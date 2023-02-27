@@ -10,7 +10,7 @@
 #import "RCTAppleHealthKit+Queries.h"
 #import "RCTAppleHealthKit+Utils.h"
 
-#import "SwiftInterfaceFiles.h"
+//#import "SwiftInterfaceFiles.h"
 
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventDispatcher.h>
