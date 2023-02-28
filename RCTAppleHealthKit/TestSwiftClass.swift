@@ -8,8 +8,8 @@
 
 import Foundation
 
-@objc (TestSwiftClass)
-public class TestSwiftClass: NSObject {
+//@objc (TestSwiftClass)
+@objcMembers public class TestSwiftClass: NSObject {
     func returnValue() -> String {
         return "value from Swift class"
     }
