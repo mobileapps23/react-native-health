@@ -72,8 +72,6 @@
 		406465DC29ACD5CF008436FA /* RCTAppleHealthKit+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCTAppleHealthKit+Test.m"; sourceTree = "<group>"; };
 		4064661D29AD1527008436FA /* RCTAppleHealthKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCTAppleHealthKit-Bridging-Header.h"; sourceTree = "<group>"; };
 		4064661E29AD1528008436FA /* TestSwiftClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwiftClass.swift; sourceTree = "<group>"; };
-		4064662029AD158F008436FA /* SwiftInterfaceFiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftInterfaceFiles.h; sourceTree = "<group>"; };
-		4064662129AE0BE0008436FA /* RCTAppleHealthKit-Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTAppleHealthKit-Swift.h"; sourceTree = "<group>"; };
 		4F8095C72523C39D00A84ADB /* RCTAppleHealthKit+Methods_LabTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTAppleHealthKit+Methods_LabTests.h"; sourceTree = "<group>"; };
 		4F8095C82523C39D00A84ADB /* RCTAppleHealthKit+Methods_LabTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTAppleHealthKit+Methods_LabTests.m"; sourceTree = "<group>"; };
 		58C81E6D1F84F6970005DD48 /* RCTAppleHealthKit+Methods_Activity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCTAppleHealthKit+Methods_Activity.m"; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 				8C79D95F268E081A00DBDC40 /* RCTAppleHealthKit+Methods_ClinicalRecords.m */,
 				136368C1272BE98800C9A95F /* RTCAppleHealthKit+Methods_Statistics.h */,
 				136368C2272BE98800C9A95F /* RTCAppleHealthKit+Methods_Statistics.m */,
-				ABA7B427B5187820CBE7BCD1 /* Types */,
 				ABA7B06B86046F15D272E16A /* RCTTypes.h */,
 				ABA7B94050B5945ABBCA2C5A /* RCTInterval.h */,
 				ABA7BF348D7660B4B4A02FB8 /* RCTAggregatorType.h */,
@@ -171,18 +168,9 @@
 				406465DB29ACD5CF008436FA /* RCTAppleHealthKit+Test.h */,
 				406465DC29ACD5CF008436FA /* RCTAppleHealthKit+Test.m */,
 				4064661E29AD1528008436FA /* TestSwiftClass.swift */,
-				4064662029AD158F008436FA /* SwiftInterfaceFiles.h */,
-				4064662129AE0BE0008436FA /* RCTAppleHealthKit-Swift.h */,
 				4064661D29AD1527008436FA /* RCTAppleHealthKit-Bridging-Header.h */,
 			);
 			path = RCTAppleHealthKit;
-			sourceTree = "<group>";
-		};
-		ABA7B427B5187820CBE7BCD1 /* Types */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
