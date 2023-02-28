@@ -11,7 +11,7 @@
 #import "RCTAppleHealthKit+Utils.h"
 
 //#import "SwiftInterfaceFiles.h"
-#import <RCTAppleHealthKit/RCTAppleHealthKit-Swift.h>
+#import "RCTAppleHealthKit/RCTAppleHealthKit-Swift.h"
 
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventDispatcher.h>
