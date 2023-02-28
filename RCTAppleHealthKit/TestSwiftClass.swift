@@ -10,7 +10,7 @@ import Foundation
 
 //@objc (TestSwiftClass)
 @objcMembers public class TestSwiftClass: NSObject {
-    func returnValue() -> String {
+    public func returnValue() -> String {
         return "value from Swift class"
     }
 }
