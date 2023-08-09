@@ -362,7 +362,7 @@
         if ([@"ProgesteroneTestResult" isEqualToString: key]) {
             return [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierProgesteroneTestResult];
         } else if ([@"PregnancyTestResult" isEqualToString: key]) {
-            return [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierIrregularMenstrualCycles];
+            return [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierPregnancyTestResult];
         }
     }
 
