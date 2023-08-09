@@ -477,6 +477,13 @@ declare module 'react-native-health' {
       ) => void,
     ): void
 
+    getReproductiveStatistic(
+      callback: (
+        err: string,
+        results: Array<HealthStatisticsReproductiveValue>,
+      ) => void,
+    ): void
+
     Constants: Constants
   }
 
@@ -510,6 +517,11 @@ declare module 'react-native-health' {
     lastEntry: string
     medianDays: number
     entryCount: number
+  }
+
+  export interface HealthStatisticsReproductiveValue {
+    parameterName: string
+    parameterData?: [BaseValue]
   }
 
   export interface SleepValue extends BaseValue {
