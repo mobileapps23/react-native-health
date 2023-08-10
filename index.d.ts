@@ -480,7 +480,23 @@ declare module 'react-native-health' {
     getReproductiveStatistic(
       callback: (
         err: string,
-        results: Array<HealthStatisticsReproductiveValue>,
+        results: Array<HealthStatisticsValue>,
+      ) => void,
+    ): void
+
+    getReproductiveStatisticWithOptions(
+      options: HealthReproductiveStatisticsInputOptions,
+      callback: (
+        err: string,
+        results: Array<HealthStatisticsValue>,
+      ) => void,
+    ): void
+
+    getSymptomStatisticWithOptions(
+      options: HealthSymptomStatisticsInputOptions,
+      callback: (
+        err: string,
+        results: Array<HealthStatisticsValue>,
       ) => void,
     ): void
 
@@ -519,7 +535,7 @@ declare module 'react-native-health' {
     entryCount: number
   }
 
-  export interface HealthStatisticsReproductiveValue {
+  export interface HealthStatisticsValue {
     parameterName: string
     parameterData?: [BaseValue]
   }
@@ -708,6 +724,72 @@ declare module 'react-native-health' {
 
   export interface HealthMedianStatisticsInputOptions {
     types: ((StatisticKey)[] | readonly StatisticKey[]);
+  }
+
+  export type ReproductiveStatisticKey =
+    |'menstrualFlow'
+    'intermenstrualBleeding'
+    'infrequentMenstrualCycles'
+    'irregularMenstrualCycles'
+    'persistentIntermenstrualBleeding'
+    'prolongedMenstrualPeriods'
+    'cervicalMucusQuality'
+    'ovulationTestResult'
+    'progesteroneTestResult'
+    'sexualActivity'    
+    'contraceptive'
+    'pregnancy'
+    'pregnancyTestResult'
+    'lactation'
+    'basalBodyTemperature'
+
+  export interface HealthReproductiveStatisticsInputOptions {
+    types: ((ReproductiveStatisticKeyy)[] | readonly ReproductiveStatisticKey[]);
+  }
+
+  export type SymptomStatisticKey =
+    'abdominalCramps'
+    'bloating'
+    'constipation'
+    'diarrhea'
+    'heartburn'
+    'nausea'
+    'vomiting'
+    'appetiteChanges'
+    'chills'
+    'dizziness'
+    'fainting'
+    'fatigue'
+    'fever'
+    'generalizedBodyAche'
+    'hotFlashes'
+    'chestTightnessOrPain'
+    'coughing'
+    'rapidPoundingOrFlutteringHeartbeat'
+    'shortnessOfBreath'
+    'skippedHeartbeat'
+    'wheezing'
+    'lowerBackPain'
+    'headache'
+    'memoryLapse'
+    'moodChanges'
+    'lossOfSmell'
+    'lossOfTaste'
+    'runnyNose'
+    'soreThroat'
+    'sinusCongestion'
+    'breastPain'
+    'pelvicPain'
+    'vaginalDryness'
+    'acne'
+    'drySkin'
+    'hairLoss'
+    'nightSweats'
+    'sleepChanges'
+    'bladderIncontinence'
+
+  export interface HealthSymptomStatisticsInputOptions {
+    types: ((SymptomStatisticKey)[] | readonly SymptomStatisticKey[]);
   }
 
   export interface HKWorkoutQueriedSampleType {
@@ -919,6 +1001,8 @@ declare module 'react-native-health' {
     InhalerUsage = 'InhalerUsage',
     InsulinDelivery = 'InsulinDelivery',
     IntermenstrualBleeding = 'IntermenstrualBleeding',
+    InfrequentMenstrualCycles = 'InfrequentMenstrualCycles',
+    IrregularMenstrualCycles = 'IrregularMenstrualCycles',
     Iodine = 'Iodine',
     Iron = 'Iron',
     LabResultRecord = 'LabResultRecord',
@@ -934,12 +1018,14 @@ declare module 'react-native-health' {
     OvulationTestResult = 'OvulationTestResult',
     OxygenSaturation = 'OxygenSaturation',
     PantothenicAcid = 'PantothenicAcid',
+    PersistentIntermenstrualBleeding = 'PersistentIntermenstrualBleeding',
     Phosphorus = 'Phosphorus',
     Potassium = 'Potassium',
     Pregnancy = 'Pregnancy',
     PregnancyTestResult = 'PregnancyTestResult',
     ProcedureRecord = 'ProcedureRecord',
     ProgesteroneTestResult = 'ProgesteroneTestResult',
+    ProlongedMenstrualPeriods = 'ProlongedMenstrualPeriods',
     Protein = 'Protein',
     Riboflavin = 'Riboflavin',
     Selenium = 'Selenium',

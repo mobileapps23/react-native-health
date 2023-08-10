@@ -608,6 +608,18 @@ RCT_EXPORT_METHOD(getReproductiveStatistic:(RCTResponseSenderBlock)callback)
     [self statistics_getReproductiveStatistic:callback];
 }
 
+RCT_EXPORT_METHOD(getReproductiveStatisticWithOptions:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+{
+    [self _initializeHealthStore];
+    [self statistics_getReproductiveStatisticWithParameters:input callback:callback];
+}
+
+RCT_EXPORT_METHOD(getSymptomStatisticWithOptions:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+{
+    [self _initializeHealthStore];
+    [self statistics_getReproductiveStatisticWithParameters:input callback:callback];
+}
+
 - (HKHealthStore *)_initializeHealthStore {
   if(![self healthStore]) {
     self.healthStore = [[HKHealthStore alloc] init];
