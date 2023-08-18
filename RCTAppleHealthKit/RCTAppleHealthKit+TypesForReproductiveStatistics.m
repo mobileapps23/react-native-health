@@ -54,7 +54,7 @@
              @"soreThroat",
              @"sinusCongestion",
              @"breastPain",
-             @"PelvicPain",
+             @"pelvicPain",
              @"acne",
              @"sleepChanges",
              @"memoryLapse",
