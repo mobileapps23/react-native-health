@@ -1,4 +1,5 @@
 import { HealthInputOptions } from 'react-native-health'
+import { Double } from 'react-native/Libraries/Types/CodegenTypes'
 
 declare module 'react-native-health' {
   export interface HealthKitPermissions {
@@ -480,7 +481,7 @@ declare module 'react-native-health' {
     getReproductiveStatistic(
       callback: (
         err: string,
-        results: Array<HealthStatisticsValue>,
+        results: Array<HealthStatisticsReproductiveValue>,
       ) => void,
     ): void
 
@@ -488,7 +489,7 @@ declare module 'react-native-health' {
       options: HealthReproductiveStatisticsInputOptions,
       callback: (
         err: string,
-        results: Array<HealthStatisticsValue>,
+        results: Array<HealthStatisticsReproductiveValue>,
       ) => void,
     ): void
 
@@ -496,7 +497,7 @@ declare module 'react-native-health' {
       options: HealthSymptomStatisticsInputOptions,
       callback: (
         err: string,
-        results: Array<HealthStatisticsValue>,
+        results: Array<HealthStatisticsReproductiveValue>,
       ) => void,
     ): void
 
@@ -535,9 +536,16 @@ declare module 'react-native-health' {
     entryCount: number
   }
 
-  export interface HealthStatisticsValue {
+  export interface HealthReproductiveValue extends BaseValue {
+    categoryType?: string
+    value?: number
+    quantityValue?: number
+    unitValue?: string
+  }
+
+  export interface HealthStatisticsReproductiveValue {
     parameterName: string
-    parameterData?: [BaseValue]
+    parameterData?: [HealthReproductiveValue]
   }
 
   export interface SleepValue extends BaseValue {

@@ -121,6 +121,7 @@
 
             NSMutableArray *parameterData = [NSMutableArray new];
 
+            // first cast element as HKSamole as parent class
             for (HKSample *sample in resultArray) {
                 NSMutableDictionary *sampleData = [NSMutableDictionary dictionary];
 
@@ -131,6 +132,28 @@
                 sampleData[@"startDate"] = startDateString;
                 sampleData[@"endDate"] = endDateString;
                 sampleData[@"metadata"] = endDateString;
+
+                // then check if element is category or quantity
+                NSInteger index = [resultArray indexOfObject:sample];
+
+                if ([[resultArray objectAtIndex:index] isKindOfClass:[HKCategorySample class]]) {
+                    __kindof HKCategorySample *categorySample = [resultArray objectAtIndex:index];
+                    sampleData[@"categoryType"] = [[categorySample valueForKey:@"categoryType"] description];
+                    if ([categorySample value]) {
+                        sampleData[@"value"] = @([categorySample value]);
+                    }
+                }
+
+                if ([[resultArray objectAtIndex:index] isKindOfClass:[HKQuantitySample class]]) {
+                    __kindof HKQuantitySample *quantitySample = [resultArray objectAtIndex:index];
+
+                    //HKQuantity - should input unit for correct output
+                    // in our case only BasalTemp has quantity type with F unit
+                    HKQuantity *quantity = quantitySample.quantity;
+                    double value = [quantity doubleValueForUnit:[HKUnit degreeFahrenheitUnit]];
+                    sampleData[@"quantityValue"] = @(value);
+                    sampleData[@"unitValue"] = @"degF";
+                }
                 [parameterData addObject: sampleData];
             }
             response[@"parameterData"] = parameterData.count != 0 ? parameterData : [NSArray new];
@@ -258,6 +281,7 @@
 
             NSMutableArray *parameterData = [NSMutableArray new];
 
+            // first cast element as HKSamole as parent class
             for (HKSample *sample in resultArray) {
                 NSMutableDictionary *sampleData = [NSMutableDictionary dictionary];
 
@@ -267,7 +291,29 @@
                 sampleData[@"id"] = [[sample UUID] UUIDString];
                 sampleData[@"startDate"] = startDateString;
                 sampleData[@"endDate"] = endDateString;
-                sampleData[@"metadata"] = endDateString;
+                sampleData[@"metadata"] = [sample metadata];
+
+                // then check if element is category or quantity
+                NSInteger index = [resultArray indexOfObject:sample];
+
+                if ([[resultArray objectAtIndex:index] isKindOfClass:[HKCategorySample class]]) {
+                    __kindof HKCategorySample *categorySample = [resultArray objectAtIndex:index];
+                    sampleData[@"categoryType"] = [[categorySample valueForKey:@"categoryType"] description];
+                    if ([categorySample value]) {
+                        sampleData[@"value"] = @([categorySample value]);
+                    }
+                }
+
+                if ([[resultArray objectAtIndex:index] isKindOfClass:[HKQuantitySample class]]) {
+                    __kindof HKQuantitySample *quantitySample = [resultArray objectAtIndex:index];
+
+                    //HKQuantity - should input unit for correct output
+                    // in our case only BasalTemp has quantity type with F unit
+                    HKQuantity *quantity = quantitySample.quantity;
+                    double value = [quantity doubleValueForUnit:[HKUnit degreeFahrenheitUnit]];
+                    sampleData[@"quantityValue"] = @(value);
+                    sampleData[@"unitValue"] = @"degF";
+                }
                 [parameterData addObject: sampleData];
             }
             response[@"parameterData"] = parameterData.count != 0 ? parameterData : [NSArray new];
