@@ -729,6 +729,21 @@ declare module 'react-native-health' {
     | 'uvExposure'
     | 'underwaterDepth'
     | 'waterTemperature'
+      'menstrualFlow'
+      'intermenstrualBleeding'
+      'infrequentMenstrualCycles'
+      'irregularMenstrualCycles'
+      'persistentIntermenstrualBleeding'
+      'prolongedMenstrualPeriods'
+      'cervicalMucusQuality'
+      'ovulationTestResult'
+      'progesteroneTestResult'
+      'sexualActivity'    
+      'contraceptive'
+      'pregnancy'
+      'pregnancyTestResult'
+      'lactation'
+      'basalBodyTemperature'
 
   export interface HealthMedianStatisticsInputOptions {
     types: ((StatisticKey)[] | readonly StatisticKey[]);
@@ -749,10 +764,10 @@ declare module 'react-native-health' {
     'pregnancy'
     'pregnancyTestResult'
     'lactation'
-    'basalBodyTemperature'
+    'basalBodyTemperature'  
 
   export interface HealthReproductiveStatisticsInputOptions {
-    types: ((ReproductiveStatisticKeyy)[] | readonly ReproductiveStatisticKey[]);
+    types: ((ReproductiveStatisticKey)[] | readonly ReproductiveStatisticKey[]);
   }
 
   export type SymptomStatisticKey =
