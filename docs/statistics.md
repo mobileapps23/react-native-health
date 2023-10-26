@@ -15,6 +15,16 @@ Query statistic (aggregated) biomarkers.
 |bodyTemperature (температура тела)|getStatisticBodyTemperature|
 |oxygenSaturation (насыщение кислородом)|getStatisticOxygenSaturation|
 |restingHeartRate (пульс в покое)|getStatisticRestingHeartRate|
+|Dietary| |
+|energyConsumed (энергетическая ценность)|getStatisticDietaryEnergyConsumed|
+|protein (белок)|getStatisticDietaryProtein|
+|fiber (клетчатка)|getStatisticDietaryFiber|
+|totalFat (жиры)|getStatisticDietaryTotalFat|
+|water|getStatisticDietaryWater (вода)|
+|Lab and Test Results||
+|insulinDelivery (подача инсулина)|getStatisticInsulinDelivery|
+
+
 
 ## Example call
 
@@ -26,6 +36,16 @@ let options = {
   startDate: new Date(2021, 0, 0).toISOString(), // optional
   endDate: new Date().toISOString(), // optional; default now
 }
+```
+For dietary and insulinDelivery:
+```typescript
+let options: HealthStatisticsDietaryInputOptions = {
+        aggregator: HealthStatisticsDietaryAggregatorType.CUMULATIVE_SUM,
+        interval: HealthStatisticsIntervalType.DAY, // optional; default HealthStatisticsIntervalType.MONTH
+        unit: 'calorie', // optional
+        startDate: new Date(2021, 0, 0).toISOString(),
+        endDate: new Date().toISOString(),
+      }
 ```
 
 Method call example:
@@ -42,11 +62,12 @@ AppleHealthKit.getStatisticBodyMass(
 )
 ```
 
+
 ## Request payload
 
 |name|type|required|
 |---|---|---|
-|aggregator|HealthStatisticsCommonAggregatorType or HealthStatisticsStepsAggregatorType|✓|
+|aggregator|HealthStatisticsCommonAggregatorType or HealthStatisticsStepsAggregatorType or HealthStatisticsDietaryAggregatorType|✓|
 |interval|HealthStatisticsIntervalType||
 |unit|string||
 |startDate|string|✓|
@@ -71,6 +92,8 @@ enum CumulativeAggregatorsType {
 export type HealthStatisticsCommonAggregatorType = GenericAggregatorsType | AverageAggregatorsType;
 
 export type HealthStatisticsStepsAggregatorType = GenericAggregatorsType | CumulativeAggregatorsType;
+
+export type HealthStatisticsDietaryAggregatorType = CumulativeAggregatorsType
 ```
 
 ## Response
